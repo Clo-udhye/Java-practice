@@ -14,6 +14,8 @@ public class BookEx01{
     public static void main(String[] args){
         //객체를 참조하는 배열
         int[] arr1 = new int[3];
+
+        //2차원배열
         Book[] arr2 = new Book[3];  //Book형을 넣을수있는 배열이 생성
         
         Book book1 = new Book("Java", "홍길동", 1000);
