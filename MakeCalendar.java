@@ -11,14 +11,11 @@ public class MakeCalendar{
         */
         if(args.length == 1){
             int year = Integer.parseInt(args[0]);
-            int month = 1;
             Calendar c = Calendar.getInstance();
             
-            c.set(year, month-1 , 1);
-            int startD = c.get(c.DAY_OF_WEEK);  //DayOfWeek
-            c.set(year, month , 1-1);
-            int endD = c.get(c.DAY_OF_WEEK);
-            int checkD = startD;
+            int startD;  //DayOfWeek
+            int endD;
+            int checkD;
 
             for(int m =1; m<=12; m++){
                 c.set(year, m-1 , 1);
@@ -26,11 +23,15 @@ public class MakeCalendar{
                 System.out.println("\t|  일\t|  월\t|  화\t|  수\t|  목\t|  금\t|  토\t|");
                 System.out.println("\t--------------------------------------------------------");
 
+                startD = c.get(c.DAY_OF_WEEK);
+                checkD = startD;
+
                 for(int t=1; t<=startD; t++){
                     System.out.print("\t");
                 }
 
-                for(int d=1; d<endD; d++){
+                c.set(year, m, 1-1);
+                for(int d=1; d<=c.get(c.DATE); d++){
                     System.out.print("|  "+d+"\t");
                     checkD++;
                     if(checkD%7 == 1){
@@ -41,8 +42,8 @@ public class MakeCalendar{
                 if (checkD%7 != 1){
                     System.out.print("|");
                 }
+                System.out.println();
             }
-
         } else if(args.length == 2){
             int year = Integer.parseInt(args[0]);
             int month = Integer.parseInt(args[1]);
