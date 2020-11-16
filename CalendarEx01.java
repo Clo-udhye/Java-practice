@@ -2,6 +2,7 @@ import java.util.Calendar;
 
 public class CalendarEx01{
     public static void main(String[] args) throws Exception{
+        // 현재시간
         Calendar c = Calendar.getInstance();
         //System.out.println(c.toString()); //날짜에 대한 정보가 다나옴!
         
