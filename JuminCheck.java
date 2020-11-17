@@ -5,6 +5,12 @@ public class JuminCheck{
             java JuminCheck 123456-1234567
             맞다 / 틀리다
         */
+        
+        if(args.length!=1 || args[0].length()!=14 || !(args[0].substring(6, 7)).equals("-")){
+            System.out.println("입력 형식 오류 : xxxxxx-xxxxxxx");
+            System.exit(0);
+        }
+
         String juminStr =  args[0].replaceAll("-", "");
         int[] calValue = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
         int sum = 0; 
