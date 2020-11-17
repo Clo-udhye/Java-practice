@@ -30,6 +30,7 @@ public class AnimalExample {
     public static void main(String[] args){
         Dog dog = new Dog();
         Cat cat = new Cat();
+        
         System.out.print(dog.getClass().getName()+"이 ");
         dog.breathe();
          System.out.print("울음소리 ");
@@ -39,5 +40,15 @@ public class AnimalExample {
         cat.breathe();
         System.out.print("울음소리 ");
         cat.sound();
+        
+        //상속 이용
+        Animal animal = new Dog();
+        System.out.print("이 동물은 " + animal.getClass().getName());
+        animal.sound();
+
+        animal = new Cat();
+        System.out.print("이 동물은 " + animal.getClass().getName());
+        animal.sound();
+
     }
 }
