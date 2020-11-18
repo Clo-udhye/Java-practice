@@ -1,27 +1,43 @@
-class Car{
-    //필드
-    String company = "현대자동차";
-    String model = "그랜저";
-    String color = "검정";
-    int maxSpeed = 350;
-    int speed;
+interface Tire {
+    public void roll();
+}
 
+class HankookTire implements Tire{
+    @Override
+    public void roll(){
+        System.out.println("한국 타이어가 굴러갑니다");
+    }
+}
+
+class KumhoTire implements Tire{
+    @Override
+    public void roll(){
+        System.out.println("금호 타이어가 굴러갑니다");
+    }
+}
+
+class Car {
+    Tire frontLeftTire = new HankookTire();
+    Tire frontRightTire = new HankookTire();
+    Tire backLeftTire = new HankookTire();
+    Tire backRightTire = new HankookTire();
+
+    void run(){
+        frontLeftTire.roll();
+        frontRightTire.roll();
+        backLeftTire.roll();
+        backRightTire.roll();
+    }
 }
 
 public class CarExample{
     public static void main(String[] args){
-        //객체 생성
         Car myCar = new Car();
+        myCar.run();
 
-        //필드값 읽기
-        System.out.println( "제작회사: \t" + myCar.company );
-        System.out.println( "모델명: \t" + myCar.model );
-        System.out.println( "색깔: \t\t" + myCar.color );
-        System.out.println( "최고속도: \t" + myCar.maxSpeed );
-        System.out.println( "현재속도: \t" + myCar.speed );
+        myCar.frontLeftTire = new KumhoTire();
+        myCar.frontRightTire = new KumhoTire();
 
-        //필드값 변경
-        myCar.speed = 60;
-        System.out.println( "수정된 속도: \t" + myCar.speed );
+        myCar.run();
     }
 }

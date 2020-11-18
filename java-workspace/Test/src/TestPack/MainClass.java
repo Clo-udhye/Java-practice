@@ -1,10 +1,10 @@
-package com;
+package TestPack;
 
-public class JavaEx01 {
+public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("패키지");
+
 	}
 
 }
