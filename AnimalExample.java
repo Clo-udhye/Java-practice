@@ -41,7 +41,7 @@ public class AnimalExample {
         System.out.print("울음소리 ");
         cat.sound();
         
-        //상속 이용
+        //다형성 이용
         Animal animal = new Dog();
         System.out.print("이 동물은 " + animal.getClass().getName());
         animal.sound();
