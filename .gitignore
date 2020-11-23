@@ -2,3 +2,5 @@
 *.zip
 /eclipse/
 /tool/
+java-workspace/Exception
+java-workspace/PayCheck_ex
