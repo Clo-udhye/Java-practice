@@ -9,7 +9,7 @@ public class JoinExample {
 		sumThread.start();
 		
 		try {
-			sumThread.join();	//sumThread가 종료될 때까지 메인 스레드를 종료시킴
+			sumThread.join();	//sumThread가 종료될 때까지 메인 스레드를 정지시킴
 		} catch (InterruptedException e) {}
 		
 		System.out.println("1~100까지 합 : " + sumThread.getSum());
