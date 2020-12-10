@@ -1,4 +1,5 @@
-package model1;
+import model1.ZipcodeDAO;
+import model1.ZipcodeTO;
 
 import java.awt.EventQueue;
 
