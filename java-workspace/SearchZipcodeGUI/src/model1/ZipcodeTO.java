@@ -7,6 +7,7 @@ public class ZipcodeTO {
 	private String dong;
 	private String ri;
 	private String bunji;
+	private String seq;
 	
 	public String getZipcode() {
 		return zipcode;
@@ -43,6 +44,12 @@ public class ZipcodeTO {
 	}
 	public void setBunji(String bunji) {
 		this.bunji = bunji;
+	}
+	public String getSeq() {
+		return seq;
+	}
+	public void setSeq(String seq) {
+		this.seq = seq;
 	}
 		
 }

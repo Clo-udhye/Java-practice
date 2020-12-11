@@ -11,6 +11,7 @@ import javax.swing.border.TitledBorder;
 
 import model1.ZipcodeTableModel;
 import model1.ZipcodeTableModel2;
+import model1.ZipcodeTableModel3;
 
 import javax.swing.JScrollPane;
 import java.awt.event.MouseAdapter;
@@ -82,7 +83,8 @@ public class ZipcodeSearchUI06 extends JFrame {
 					JOptionPane.showMessageDialog(ZipcodeSearchUI06.this, "2글자 이상 입력해주세요.", "경고", JOptionPane.WARNING_MESSAGE);
 				} else {
 					//table.setModel(new ZipcodeTableModel(strDong));
-					table.setModel(new ZipcodeTableModel2(strDong));
+					//table.setModel(new ZipcodeTableModel2(strDong));
+					table.setModel(new ZipcodeTableModel3(strDong));
 				}
 			}
 		});
