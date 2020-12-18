@@ -2,8 +2,14 @@
 *.zip
 /eclipse/
 /tool/
+/apache-tomcat-9.0.41/
+/jsp-workspace/
+
 
 /Mini_Project/
 java-workspace/Exception
 java-workspace/PayCheck_ex
 java-workspace/PayCheck_Program/
+java-workspace/ExerciseManagement/
+java-workspace/ExerciseManagement_Erd/
+java-workspace/ExerciseManagement2/
